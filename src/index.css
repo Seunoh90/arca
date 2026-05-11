@@ -31,6 +31,14 @@ body {
   background: #475569;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 @keyframes glitch-skew {
   0% { transform: skew(0deg); opacity: 1; }
   10% { transform: skew(-20deg); opacity: 0.8; text-shadow: 10px 0 red, -10px 0 cyan; }
