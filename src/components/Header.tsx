@@ -30,12 +30,12 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
         </div>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-4 sm:gap-8 w-full md:w-auto overflow-x-auto whitespace-nowrap no-scrollbar justify-start md:justify-start pl-1 md:pl-8 border-l-0 md:border-l border-slate-800 pb-1 md:pb-0">
+        <nav className="flex items-center gap-4 sm:gap-8 w-full md:w-auto overflow-x-auto whitespace-nowrap no-scrollbar justify-start pl-1 md:pl-8 border-l-0 md:border-l border-slate-800 pb-1 md:pb-0">
           {navItems.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`relative px-2 py-4 text-sm font-medium transition-colors hover:text-cyan-400
+              className={`relative px-2 py-4 text-sm font-medium transition-colors hover:text-cyan-400 shrink-0 whitespace-nowrap
                 ${activeSection === item.id ? 'text-[#ff3333]' : 'text-slate-400'}
               `}
             >

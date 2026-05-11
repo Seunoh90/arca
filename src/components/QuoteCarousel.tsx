@@ -38,10 +38,10 @@ export const QuoteCarousel: React.FC<QuoteCarouselProps> = ({ quotes }) => {
         </div>
       </div>
 
-      <div className="relative h-24 flex items-center justify-center text-center px-8">
+      <div className="relative min-h-[6rem] py-4 flex items-center justify-center text-center px-8">
         <button
           onClick={prevQuote}
-          className="absolute left-0 text-slate-500 hover:text-white transition-colors p-1"
+          className="absolute left-0 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors p-1"
         >
           <ChevronLeft size={20} />
         </button>
@@ -53,7 +53,7 @@ export const QuoteCarousel: React.FC<QuoteCarouselProps> = ({ quotes }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="text-white font-serif italic text-lg leading-relaxed"
+            className="text-white font-serif italic text-base md:text-lg leading-relaxed break-keep"
           >
             "{quotes[currentIndex]}"
           </motion.p>
@@ -61,7 +61,7 @@ export const QuoteCarousel: React.FC<QuoteCarouselProps> = ({ quotes }) => {
 
         <button
           onClick={nextQuote}
-          className="absolute right-0 text-slate-500 hover:text-white transition-colors p-1"
+          className="absolute right-0 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors p-1"
         >
           <ChevronRight size={20} />
         </button>
